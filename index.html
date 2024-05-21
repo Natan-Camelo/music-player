@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player de música</title>
+
+    <link rel="icon" href="./src/files/img/music.ico">
+
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+
+    <link rel="stylesheet" href="https://fontawesome.com/icons/play?f=classic&s=solid">
+</head>
+<body>
+    <div id="player">
+        <h4><i class="material-icons">equalizer</i> Music Player</h4>
+
+        <div class="card">
+            <div class="card-image">
+                
+            </div>
+
+            <div class="card-content">
+                <h5>Titulo</h5>
+                <p class="artist">Artista</p>
+            </div>
+
+            <div class="bar">
+                <progress value="0" max="1"></progress>
+                <div class="point"></div>
+            </div>
+
+            <div class="time">
+                <p class="beginning" >0:00</p>
+                <p class="end">0:00</p>
+            </div>
+
+            <div class="icons-player">
+                <!-- <img class="repeat" src="./src/files/svg/repeat-solid.svg" alt="repeat song"> -->
+                <img class="play" src="./src/files/svg/backward-solid.svg" alt="backward">
+                <img class="play" id="start-music" src="./src/files/svg/play-solid.svg" alt="play">
+                <img class="play" id="pause" src="./src/files/svg/pause-solid.svg" alt="pause">
+                <img class="play" src="./src/files/svg/forward-solid.svg" alt="forward">
+                <!-- <img class="volume" src="./src/files/svg/volume-high-solid.svg" alt="volume"> -->
+            </div>
+            
+            <audio src="./src/files/music/paradox.mp3"></audio>
+        </div>
+    </div>
+</body>
+    <script src="./src/js/index.js"></script>
+    <script src="./src/js/data.js"></script>
+    <script src="./src/js/player.js"></script>
+</html>
