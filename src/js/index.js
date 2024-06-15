@@ -6,8 +6,8 @@ const player = {
     data: {
         title: "Paradox",
         artist: "Survive Said The Prophet",
-        cover: "../src/files/img/survive-said-the-prophet-paradox.jpeg",
-        file: "../src/files/music/paradox.mp3"
+        cover: "./src/files/img/survive-said-the-prophet-paradox.jpeg",
+        file: "./src/files/music/paradox.mp3"
     }
 };
 
