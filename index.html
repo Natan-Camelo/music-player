@@ -1,54 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player de música</title>
+    <title>Blue Ring</title>
 
-    <link rel="icon" href="./src/files/img/music.ico">
+    <link rel="icon" href="./src/files/img/svg/blue-ring.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/scrollbar.css">
     <link rel="stylesheet" href="./src/css/reset.css">
 
-    <link rel="stylesheet" href="https://fontawesome.com/icons/play?f=classic&s=solid">
+    <script src="https://kit.fontawesome.com/4b32f3bf3a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="player">
-        <h4><i class="material-icons">equalizer</i> Music Player</h4>
+    <header>
+        <div class="header-logo">
+            <i class="fa-solid fa-compact-disc" style="color: #74C0FC;"></i>
+        </div>
 
-        <div class="card">
-            <div class="card-image">
-                
-            </div>
+        <div class="header-retroceder">
+            <i class="fa-solid fa-chevron-left" style="color: #74C0FC;"></i>
+        </div>
 
-            <div class="card-content">
-                <h5>Titulo</h5>
-                <p class="artist">Artista</p>
-            </div>
+        <div class="header-avanca">
+            <i class="fa-solid fa-chevron-right" style="color: #74C0FC;"></i>
+        </div>
+        
+        <div class="header-home">
+            <i class="fa-solid fa-house" style="color: #74C0FC;"></i>
+        </div>
 
-            <div class="bar">
-                <progress value="0" max="1"></progress>
-                <div class="point"></div>
-            </div>
+        <div class="header-pesquisa">
+            <i class="fa-solid fa-magnifying-glass" style="color: #74C0FC;"></i>
+            <input type="text" placeholder="O que você quer ouvir?">
+        </div>
+        
+        <div class="header-inscrever">
+            <button>Inscrever-se</button>
+        </div>
 
-            <div class="time">
-                <p class="beginning" >0:00</p>
-                <p class="end">0:00</p>
-            </div>
+        <div class="header-entrar">
+            <button>Entrar</button>
+        </div>
+    </header>
 
-            <div class="icons-player">
-                <!-- <img class="repeat" src="./src/files/svg/repeat-solid.svg" alt="repeat song"> -->
-                <img class="play" src="./src/files/svg/backward-solid.svg" alt="backward">
-                <img class="play" id="start-music" src="./src/files/svg/play-solid.svg" alt="play">
-                <img class="play" id="pause" src="./src/files/svg/pause-solid.svg" alt="pause">
-                <img class="play" src="./src/files/svg/forward-solid.svg" alt="forward">
-                <!-- <img class="volume" src="./src/files/svg/volume-high-solid.svg" alt="volume"> -->
+    <div class="container">
+        <nav>
+            <div class="nav-biblioteca">
+                <i class="fa-solid fa-layer-group" style="color: #74C0FC;"></i>
+                <h4>Sua Biblioteca +</h4>
             </div>
             
-            <audio src="./src/files/music/paradox.mp3"></audio>
-        </div>
+            <div class="nav-playlist">
+                <h4>Crie sua playlist</h4>
+                <p>É facil, vamos te ajudar!</p>
+                <button>Criar Playlist</button>
+            </div>
+
+            <div class="nav-podcast">
+                <h4>Que tal seguir um podcast?</h4>
+                <p>Vamos mante-lo informado de novos espisódios!</p>
+                <button>Explore Podcast</button>
+            </div>
+
+            <div class="nav-rodapé">
+                <a href="#">Legal</a>
+                <a href="#">Centro de Privacidade</a>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Cookies</a>
+                <a href="#">Sobre Anúncios</a>
+                <a href="#">Acessibilidade</a>
+            </div>
+
+            <button class="nav-idioma">
+                <i class="fa-solid fa-globe"></i>
+                Português do Brasil
+            </button>
+        </nav>
+
+        <main class="menu-principal">
+            <section class="main-sugeridos">
+                <h3>Sugestões de Artistas</h3>
+                <div class="main-artistas">
+                    <!-- dados Javascript -->
+                </div>
+
+                <h3>Sugestões de Albuns</h3>
+                <div class="main-albuns">
+                    <!-- dados Javascript -->
+                </div>
+            </section>
+        </main>
     </div>
+
+    <footer>
+        <div class="footer-player">
+            <div class="footer-album">
+                <!-- dados Javascript -->
+            </div>
+            
+            <div class="footer-control">
+                <div class="footer-i-player">
+                    <i class="fa-solid fa-backward-step" style="color: #74C0FC;"></i>
+                    <i class="fa-solid fa-circle-play" id="start-music" style="color: #74C0FC;"></i>
+                    <i class="fa-solid fa-circle-pause" id="pause" style="color: #74C0FC;"></i>
+                    <i class="fa-solid fa-forward-step" style="color: #74C0FC;"></i>
+                </div>
+
+                <div class="footer-bar">
+                    <progress value="0" max="1"></progress>
+                    <div class="point"></div>
+                </div>
+
+                <div class="footer-time">
+                    <p class="beginning" >0:00</p>
+                    <p class="end">0:00</p>
+                </div>
+                
+                <audio src="./src/files/music/paradox.mp3"></audio>
+            </div>
+        </div>
+    </footer>
 </body>
-    <script src="./src/js/index.js"></script>
-    <script src="./src/js/player.js"></script>
+    <script src="src/js/albuns.js"></script>
+    <script src="src/js/loading.js"></script>
+    <script src="src/js/playlist.js"></script>
+    <script src="src/js/script.js"></script>
 </html>
